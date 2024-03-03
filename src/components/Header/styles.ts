@@ -1,14 +1,22 @@
 import { colors, fontSize } from '@/app/styles'
 import styled from 'styled-components'
 
-export const Avatar = styled.div`
+export interface BackgroundProps {
+  imageUrl: string
+}
+
+export const Backgrond = styled.div<BackgroundProps>`
   display: flex;
+  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: ${colors.grayTwo};
   border-radius: 16px;
   justify-content: center;
 `
 
-export const Backgrond = styled.div`
+export const Avatar = styled.div`
   display: flex;
   height: 174px;
 
@@ -45,13 +53,27 @@ export const Info = styled.div`
       color: ${colors.grayThree};
     }
 
-    a {
-      margin-top: 4px;
+    div {
+      display: flex;
+      align-items: center;
+      width: 150px;
       color: ${colors.white};
+      border-bottom: 1px solid transparent;
 
       &:hover {
         border-bottom: 1px solid ${colors.white};
       }
+
+      svg {
+        margin-left: 4px;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      margin-top: 4px;
+      color: ${colors.white};
     }
   }
 
@@ -59,7 +81,7 @@ export const Info = styled.div`
     grid-column: span 2 / span 2;
     display: flex;
     justify-content: flex-end;
-    margin-top: 40px;
+    margin-top: 46px;
     color: ${colors.white};
 
     span {

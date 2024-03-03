@@ -4,14 +4,15 @@ import { FaJava } from 'react-icons/fa'
 import { SiTypescript } from 'react-icons/si'
 import { SiJavascript } from 'react-icons/si'
 import { FaReact } from 'react-icons/fa'
+import { FaSquareXTwitter } from 'react-icons/fa6'
 
 import { Avatar, Backgrond, Info, Separator } from './styles'
 
 const Header = () => {
   return (
     <>
-      <Avatar>
-        <Backgrond>
+      <Backgrond imageUrl={'/background.png'}>
+        <Avatar>
           <Image
             src="/avatar.png"
             alt="Avatar"
@@ -19,19 +20,22 @@ const Header = () => {
             height={90}
             priority
           />
-        </Backgrond>
-      </Avatar>
+        </Avatar>
+      </Backgrond>
       <Info>
         <div>
           <h1>Jônattas Moraes</h1>
           <p>Full Stack Developer</p>
-          <a
-            href="https://x.com/jonattasmoraes"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @jonattasmoraes
-          </a>
+          <div>
+            <a
+              href="https://x.com/jonattasmoraes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @jonattasmoraes
+            </a>
+            <FaSquareXTwitter />
+          </div>
         </div>
         <div>
           <span>
