@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Manjari as ABeeZee } from 'next/font/google'
 import StyledComponentsRegistry from '@/lib/registry'
+import { GlobalCss } from './styles'
 
-const roboto = Roboto({
+const noto = ABeeZee({
   subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700', '900']
+  weight: ['100', '400', '700']
 })
 
 export const metadata: Metadata = {
@@ -19,8 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      <body className={noto.className}>
+        <StyledComponentsRegistry>
+          <GlobalCss />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
