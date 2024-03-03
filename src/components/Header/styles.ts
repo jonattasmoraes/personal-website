@@ -50,7 +50,7 @@ export const Info = styled.div`
     p {
       margin-top: 4px;
       margin-bottom: 4px;
-      color: ${colors.grayThree};
+      color: ${colors.whiteTwo};
     }
 
     div {
