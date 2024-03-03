@@ -27,14 +27,12 @@ const Header = () => {
           <h1>Jônattas Moraes</h1>
           <p>Full Stack Developer</p>
           <div>
-            <a
-              href="https://x.com/jonattasmoraes"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @jonattasmoraes
+            <a href="http://" target="_blank">
+              <p>
+                @jonattasmoraes
+                <FaSquareXTwitter />
+              </p>
             </a>
-            <FaSquareXTwitter />
           </div>
         </div>
         <div>

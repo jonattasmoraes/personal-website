@@ -53,7 +53,7 @@ export const Info = styled.div`
       color: ${colors.whiteTwo};
     }
 
-    div {
+    p:nth-child(1) {
       display: flex;
       align-items: center;
       width: 150px;
@@ -66,14 +66,12 @@ export const Info = styled.div`
 
       svg {
         margin-left: 4px;
+        margin-top: -4px;
       }
     }
 
     a {
       display: flex;
-      align-items: center;
-      margin-top: 4px;
-      color: ${colors.white};
     }
   }
 

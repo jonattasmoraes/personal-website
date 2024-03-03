@@ -13,5 +13,6 @@ export const Container = styled.div`
 
   p {
     color: ${colors.whiteTwo};
+    text-align: justify;
   }
 `
