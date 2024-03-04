@@ -19,7 +19,7 @@ export const Links = styled.div`
 
   div:nth-child(1) {
     grid-column: span 1 / span 1;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
 
     p {
       color: ${colors.white};
