@@ -2,7 +2,7 @@ import { colors, fontSize } from '@/app/styles'
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  margin-bottom: 24px;
+  margin-bottom: ${fontSize.ll};
   color: ${colors.white};
 
   h2 {

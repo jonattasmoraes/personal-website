@@ -6,8 +6,8 @@ export const Container = styled.div`
   h2 {
     font-size: ${fontSize.sl};
     color: ${colors.white};
-    margin-bottom: 24px;
-    margin-top: 24px;
+    margin-bottom: ${fontSize.ll};
+    margin-top: ${fontSize.ll};
   }
 `
 

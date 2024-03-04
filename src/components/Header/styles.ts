@@ -18,13 +18,23 @@ export const Backgrond = styled.div<BackgroundProps>`
 
 export const Avatar = styled.div`
   display: flex;
+  align-items: center;
   height: 174px;
 
+  @media (max-width: 400px) {
+    height: 120px;
+  }
+
   img {
-    margin-top: 12px;
     border-radius: 50%;
     width: 150px;
     height: 150px;
+
+    @media (max-width: 400px) {
+      width: 100px;
+      height: 100px;
+      align-self: center;
+    }
 
     &:hover {
       transform: scale(1.05);
@@ -42,15 +52,29 @@ export const Info = styled.div`
   div:nth-child(1) {
     grid-column: span 3 / span 3;
 
+    @media (max-width: 400px) {
+      grid-column: span 5 / span 5;
+    }
+
     h1 {
       font-size: ${fontSize.xxl};
       color: ${colors.white};
+
+      @media (max-width: 400px) {
+        display: flex;
+        justify-content: center;
+      }
     }
 
     p {
       margin-top: 4px;
       margin-bottom: 4px;
       color: ${colors.whiteTwo};
+
+      @media (max-width: 400px) {
+        display: flex;
+        justify-content: center;
+      }
     }
 
     p:nth-child(1) {
@@ -72,6 +96,10 @@ export const Info = styled.div`
 
     a {
       display: flex;
+
+      @media (max-width: 400px) {
+        justify-content: center;
+      }
     }
   }
 
@@ -81,6 +109,10 @@ export const Info = styled.div`
     justify-content: flex-end;
     margin-top: 46px;
     color: ${colors.white};
+
+    @media (max-width: 400px) {
+      display: none;
+    }
 
     span {
       margin-left: 8px;
@@ -96,6 +128,6 @@ export const Separator = styled.div`
   width: 100%;
   height: 1px;
   background-color: ${colors.grayThree};
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: ${fontSize.ll};
+  margin-bottom: ${fontSize.ll};
 `

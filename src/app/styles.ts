@@ -37,9 +37,12 @@ export const GlobalCss = createGlobalStyle`
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-size: 16px;
   list-style: none;
   text-decoration: none;
+
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
 }
 
 body {
@@ -50,5 +53,7 @@ body {
   padding-bottom: 24px;
   padding-left: 2%;
   padding-right: 2%;
+
+
 }
 `

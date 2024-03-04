@@ -5,7 +5,7 @@ export const Container = styled.div`
   h2 {
     font-size: ${fontSize.sl};
     color: ${colors.white};
-    margin-bottom: 24px;
+    margin-bottom: ${fontSize.ll};
   }
 `
 
@@ -20,10 +20,19 @@ export const Card = styled.div`
     span {
       color: ${colors.white};
     }
+
+    @media (max-width: 400px) {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
   }
 
   div:nth-child(2) {
     grid-column: span 4 / span 4;
+
+    @media (max-width: 400px) {
+      grid-column: span 5 / span 5;
+    }
 
     img {
       width: auto;
