@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { colors, fontSize } from '@/app/styles'
+import { breakpoints, colors, fontSize } from '@/app/styles'
 
 export const Card = styled.div`
   display: grid;
@@ -11,7 +11,7 @@ export const Card = styled.div`
   div:nth-child(1) {
     grid-column: span 1 / span 1;
 
-    @media (max-width: 400px) {
+    @media (max-width: ${breakpoints.xm}) {
       margin-top: 4px;
       margin-bottom: 4px;
     }
@@ -20,7 +20,7 @@ export const Card = styled.div`
   div:nth-child(2) {
     grid-column: span 4 / span 4;
 
-    @media (max-width: 400px) {
+    @media (max-width: ${breakpoints.xm}) {
       grid-column: span 5 / span 5;
     }
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { colors, fontSize } from '@/app/styles'
+import { breakpoints, colors, fontSize } from '@/app/styles'
 
 export const Container = styled.div`
   h2 {
@@ -25,7 +25,7 @@ export const Links = styled.div`
       color: ${colors.white};
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: ${breakpoints.xm}) {
       margin-bottom: 0;
     }
   }
@@ -50,7 +50,7 @@ export const Links = styled.div`
       }
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: ${breakpoints.xm}) {
       grid-column: span 5 / span 5;
     }
   }
