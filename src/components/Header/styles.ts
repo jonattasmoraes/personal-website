@@ -21,20 +21,10 @@ export const Avatar = styled.div`
   align-items: center;
   height: 174px;
 
-  @media (max-width: ${breakpoints.xm}) {
-    height: 120px;
-  }
-
   img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-
-    @media (max-width: ${breakpoints.xm}) {
-      width: 100px;
-      height: 100px;
-      align-self: center;
-    }
 
     &:hover {
       transform: scale(1.05);
