@@ -10,10 +10,15 @@ const Footer = () => {
           <p>Linkedin</p>
         </div>
         <div>
-          <a href="https://www.linkedin.com/in/jonattas-moraes" target="_blank">
-            jonatas-moraes
-            <MdOutlineArrowOutward />
-          </a>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/jonattas-moraes"
+              target="_blank"
+            >
+              jonatas-moraes
+              <MdOutlineArrowOutward />
+            </a>
+          </div>
         </div>
       </Links>
       <Links>
@@ -21,10 +26,12 @@ const Footer = () => {
           <p>GitHub</p>
         </div>
         <div>
-          <a href="https://github.com/jonattasmoraes" target="_blank">
-            jonatasmoraes
-            <MdOutlineArrowOutward />
-          </a>
+          <div>
+            <a href="https://github.com/jonattasmoraes" target="_blank">
+              jonatasmoraes
+              <MdOutlineArrowOutward />
+            </a>
+          </div>
         </div>
       </Links>
       <Links>
@@ -32,10 +39,12 @@ const Footer = () => {
           <p>Twitter</p>
         </div>
         <div>
-          <a href="https://x.com/jonattasmoraes" target="_blank">
-            @jonattasmoraes
-            <MdOutlineArrowOutward />
-          </a>
+          <div>
+            <a href="https://x.com/jonattasmoraes" target="_blank">
+              @jonattasmoraes
+              <MdOutlineArrowOutward />
+            </a>
+          </div>
         </div>
       </Links>
       <Links>
@@ -43,10 +52,12 @@ const Footer = () => {
           <p>E-mail</p>
         </div>
         <div>
-          <a href="mailto:jonattasmoraes@hotmail.com">
-            jonattasmoraes@hotmail.com
-            <MdOutlineArrowOutward />
-          </a>
+          <div>
+            <a href="mailto:jonattasmoraes@hotmail.com">
+              jonattasmoraes@hotmail.com
+              <MdOutlineArrowOutward />
+            </a>
+          </div>
         </div>
       </Links>
     </Container>

@@ -33,6 +33,10 @@ export const Links = styled.div`
   div:nth-child(2) {
     grid-column: span 4 / span 4;
 
+    div {
+      display: flex;
+    }
+
     a {
       display: flex;
       color: ${colors.whiteTwo};
