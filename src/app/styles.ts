@@ -11,7 +11,7 @@ export const colors = {
 }
 
 export const breakpoints = {
-  xm: '400px',
+  xm: '440px',
   sm: '576px',
   md: '768px',
   lg: '992px',
