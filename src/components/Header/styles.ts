@@ -1,4 +1,4 @@
-import { colors, fontSize } from '@/app/styles'
+import { breakpoints, colors, fontSize } from '@/app/styles'
 import styled from 'styled-components'
 
 export interface BackgroundProps {
@@ -21,7 +21,7 @@ export const Avatar = styled.div`
   align-items: center;
   height: 174px;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${breakpoints.xm}) {
     height: 120px;
   }
 
@@ -30,7 +30,7 @@ export const Avatar = styled.div`
     width: 150px;
     height: 150px;
 
-    @media (max-width: 400px) {
+    @media (max-width: ${breakpoints.xm}) {
       width: 100px;
       height: 100px;
       align-self: center;
@@ -52,7 +52,7 @@ export const Info = styled.div`
   div:nth-child(1) {
     grid-column: span 3 / span 3;
 
-    @media (max-width: 400px) {
+    @media (max-width: ${breakpoints.xm}) {
       grid-column: span 5 / span 5;
     }
 
@@ -60,7 +60,7 @@ export const Info = styled.div`
       font-size: ${fontSize.xxl};
       color: ${colors.white};
 
-      @media (max-width: 400px) {
+      @media (max-width: ${breakpoints.xm}) {
         display: flex;
         justify-content: center;
       }
@@ -71,7 +71,7 @@ export const Info = styled.div`
       margin-bottom: 4px;
       color: ${colors.whiteTwo};
 
-      @media (max-width: 400px) {
+      @media (max-width: ${breakpoints.xm}) {
         display: flex;
         justify-content: center;
       }
@@ -97,7 +97,7 @@ export const Info = styled.div`
     a {
       display: flex;
 
-      @media (max-width: 400px) {
+      @media (max-width: ${breakpoints.xm}) {
         justify-content: center;
       }
     }
@@ -110,7 +110,7 @@ export const Info = styled.div`
     margin-top: 46px;
     color: ${colors.white};
 
-    @media (max-width: 400px) {
+    @media (max-width: ${breakpoints.xm}) {
       display: none;
     }
 
