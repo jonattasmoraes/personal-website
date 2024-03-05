@@ -2,6 +2,7 @@ import Cards from '../Cards/cards'
 import { Container } from './styles'
 
 import { Project } from '../Cards/cards'
+import Separator from '../Separator/separator'
 
 export type Props = {
   projects: Project[]
@@ -12,6 +13,7 @@ const Projects = ({ projects }: Props) => {
 
   return (
     <Container>
+      <Separator />
       <h2>Projetos</h2>
       {sortedProjects?.map((item) => (
         <div key={item.id}>

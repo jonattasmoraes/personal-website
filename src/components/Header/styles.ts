@@ -123,11 +123,3 @@ export const Info = styled.div`
     }
   }
 `
-
-export const Separator = styled.div`
-  width: 100%;
-  height: 1px;
-  background-color: ${colors.grayThree};
-  margin-top: ${fontSize.ll};
-  margin-bottom: ${fontSize.ll};
-`

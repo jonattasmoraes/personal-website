@@ -51,7 +51,6 @@ body {
   max-width: ${breakpoints.sm};
   margin: 0 auto;
   padding-top: 24px;
-  padding-bottom: 24px;
   padding-left: 2%;
   padding-right: 2%;
 }

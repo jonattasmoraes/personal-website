@@ -1,9 +1,11 @@
 import { MdOutlineArrowOutward } from 'react-icons/md'
 import { Container, Links } from './styles'
+import Separator from '../Separator/separator'
 
 const Footer = () => {
   return (
     <Container className="container">
+      <Separator />
       <h2>Links</h2>
       <Links>
         <div>

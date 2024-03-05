@@ -6,8 +6,9 @@ import { SiJavascript } from 'react-icons/si'
 import { FaReact } from 'react-icons/fa'
 import { FaSquareXTwitter } from 'react-icons/fa6'
 
-import { Avatar, Backgrond, Info, Separator } from './styles'
+import { Avatar, Backgrond, Info } from './styles'
 import { Props } from '../About/about'
+import Separator from '../Separator/separator'
 
 const Header = ({ content }: Props) => {
   return (
