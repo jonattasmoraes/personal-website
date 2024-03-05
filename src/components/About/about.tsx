@@ -1,15 +1,23 @@
 import { Container } from './styles'
 
-const About = () => {
+export type Content = {
+  id: string
+  banner: string
+  avatar: string
+  aboutPage: string
+}
+
+export type Props = {
+  content: Content[]
+}
+
+const About = ({ content }: Props) => {
   return (
     <Container>
       <h2>Sobre</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi natus
-        cupiditate repellendus quia facere porro exercitationem error
-        aspernatur. Nihil voluptas eum molestiae esse provident rerum architecto
-        atque repellendus labore officiis?
-      </p>
+      {content?.map((item) => (
+        <p key={item.id}>{item.aboutPage}</p>
+      ))}
     </Container>
   )
 }

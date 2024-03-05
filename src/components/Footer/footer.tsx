@@ -32,7 +32,7 @@ const Footer = () => {
           <p>Twitter</p>
         </div>
         <div>
-          <a href="https://x.com/jon_moraes_" target="_blank">
+          <a href="https://x.com/jonattasmoraes" target="_blank">
             @jonattasmoraes
             <MdOutlineArrowOutward />
           </a>

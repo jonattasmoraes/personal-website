@@ -11,6 +11,7 @@ export const colors = {
 }
 
 export const breakpoints = {
+  xm: '400px',
   sm: '576px',
   md: '768px',
   lg: '992px',
@@ -40,20 +41,18 @@ export const GlobalCss = createGlobalStyle`
   list-style: none;
   text-decoration: none;
 
-  @media (max-width: 400px) {
+  @media (  max-width: ${breakpoints.sm}) {
     font-size: 12px;
   }
 }
 
 body {
   background-color: ${colors.gray};
-  max-width: 500px;
+  max-width: ${breakpoints.sm};
   margin: 0 auto;
   padding-top: 24px;
   padding-bottom: 24px;
   padding-left: 2%;
   padding-right: 2%;
-
-
 }
 `

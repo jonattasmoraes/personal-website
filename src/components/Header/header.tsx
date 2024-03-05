@@ -7,27 +7,32 @@ import { FaReact } from 'react-icons/fa'
 import { FaSquareXTwitter } from 'react-icons/fa6'
 
 import { Avatar, Backgrond, Info, Separator } from './styles'
+import { Props } from '../About/about'
 
-const Header = () => {
+const Header = ({ content }: Props) => {
   return (
     <>
-      <Backgrond imageUrl={'/background.png'}>
-        <Avatar>
-          <Image
-            src="/avatar.png"
-            alt="Avatar"
-            width={90}
-            height={90}
-            priority
-          />
-        </Avatar>
-      </Backgrond>
+      {content?.map((item) => (
+        <div key={item.id}>
+          <Backgrond imageUrl={item.banner}>
+            <Avatar>
+              <Image
+                src={item.avatar}
+                alt="Avatar"
+                width={90}
+                height={90}
+                priority
+              />
+            </Avatar>
+          </Backgrond>
+        </div>
+      ))}
       <Info>
         <div>
           <h1>Jônattas Moraes</h1>
-          <p>Full Stack Developer</p>
+          <p>Fullstack Developer</p>
           <div>
-            <a href="http://" target="_blank">
+            <a href="https://x.com/jonattasmoraes" target="_blank">
               <p>
                 @jonattasmoraes
                 <FaSquareXTwitter />

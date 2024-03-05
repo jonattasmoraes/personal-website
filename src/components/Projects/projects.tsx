@@ -1,47 +1,32 @@
-import Image from 'next/image'
+import Cards from '../Cards/cards'
+import { Container } from './styles'
 
-import { MdOutlineArrowOutward } from 'react-icons/md'
-import { FaGithub } from 'react-icons/fa'
+import { Project } from '../Cards/cards'
 
-import { Card, Container } from './styles'
-
-type Props = {
-  linkApi?: string
+export type Props = {
+  projects: Project[]
 }
 
-const Projects = ({ linkApi }: Props) => {
+const Projects = ({ projects }: Props) => {
+  const sortedProjects = projects.slice().sort((a, b) => a.id - b.id)
+
   return (
     <Container>
       <h2>Projetos</h2>
-      <Card>
-        <div>
-          <span>2024</span>
+      {sortedProjects?.map((item) => (
+        <div key={item.id}>
+          <Cards
+            name={item.name}
+            year={item.year}
+            urlIcon={item.urlIcon}
+            aboutProject={item.aboutProject}
+            infos={item.infos}
+            repositoryUrl={item.repositoryUrl}
+            deployUrl={item.deployUrl}
+            id={0}
+          />
         </div>
-        <div>
-          <Image src="/cookie.png" alt="logo" width={50} height={50} />
-          <a href="http://" target="_blank">
-            <h3>
-              Server Project NODE
-              <MdOutlineArrowOutward />
-            </h3>
-          </a>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi natus
-            cupiditate repellendus quia facere porro exercitationem error
-            aspernatur. Nihil voluptas eum molestiae esse provident rerum
-            architecto atque repellendus labore officiis?
-          </p>
-          {linkApi && (
-            <a href={linkApi} target="_blank">
-              <span>
-                GitHub
-                <FaGithub />
-              </span>
-            </a>
-          )}
-          <span>Typescript • SQL • React • Next.js</span>
-        </div>
-      </Card>
+      ))}
     </Container>
   )
 }
