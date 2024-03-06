@@ -10,11 +10,11 @@ import { useFetch } from '@/hooks/useFetch'
 
 export default function Home() {
   const { data: projects } = useFetch<Project[]>(
-    'https://content-api-1.onrender.com/api/project'
+    'https://jon-api-website.vercel.app/api/projects'
   )
 
   const { data: content } = useFetch<Content[]>(
-    'https://content-api-1.onrender.com/api/content'
+    'https://jon-api-website.vercel.app/api/content'
   )
 
   if (!projects || !content) {
