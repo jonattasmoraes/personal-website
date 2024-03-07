@@ -7,22 +7,26 @@ import Header from '@/components/Header/header'
 import Loader from '@/components/Loading/loading'
 import Projects from '@/components/Projects/projects'
 import { useFetch } from '@/hooks/useFetch'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
-  const { data: projects } = useFetch<Project[]>(
-    'https://jon-api-website.vercel.app/api/projects'
-  )
+  const [loading, setLoading] = useState(true)
 
-  const { data: content } = useFetch<Content[]>(
-    'https://jon-api-website.vercel.app/api/content'
-  )
+  const { data: projects, isFetching: projectsIsFetching } =
+    useFetch<Project[]>('/projects')
 
-  if (!projects || !content) {
-    return <Loader />
-  }
+  const { data: content, isFetching: contentIsFetching } =
+    useFetch<Content[]>('/content')
+
+  useEffect(() => {
+    if (projectsIsFetching || contentIsFetching) {
+      setLoading(true)
+    }
+  }, [projectsIsFetching, contentIsFetching])
 
   return (
     <>
+      {loading && <Loader content={content} />}
       <Header content={content} />
       <About content={content} />
       <Projects projects={projects} />

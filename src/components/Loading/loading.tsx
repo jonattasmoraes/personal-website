@@ -1,9 +1,14 @@
 import { Loading } from './styles'
+import { Content } from '../About/about'
 
-const Loader = () => {
+type Props = {
+  content: Content[]
+}
+
+const Loader = ({ content }: Props) => {
   return (
     <Loading>
-      <div />
+      <div className={content && 'loaded'} />
     </Loading>
   )
 }
