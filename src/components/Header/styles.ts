@@ -1,25 +1,17 @@
 import { breakpoints, colors, fontSize } from '@/app/styles'
 import styled from 'styled-components'
 
-export interface BackgroundProps {
-  imageUrl: string
-}
-
-export const Backgrond = styled.div<BackgroundProps>`
+export const Backgrond = styled.div`
   display: flex;
-  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: ${colors.grayTwo};
-  border-radius: 16px;
   justify-content: center;
+  position: relative;
 `
 
 export const Avatar = styled.div`
   display: flex;
   align-items: center;
   height: 174px;
+  z-index: 1;
 
   img {
     border-radius: 50%;

@@ -15,7 +15,7 @@ const Header = ({ content }: Props) => {
     <>
       {content?.map((item) => (
         <div key={item.id}>
-          <Backgrond imageUrl={item.banner}>
+          <Backgrond>
             <Avatar>
               <Image
                 src={item.avatar}
@@ -25,6 +25,16 @@ const Header = ({ content }: Props) => {
                 priority
               />
             </Avatar>
+            <Image
+              src={item.banner}
+              alt="Banner"
+              fill
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'center',
+                borderRadius: '16px'
+              }}
+            />
           </Backgrond>
         </div>
       ))}
