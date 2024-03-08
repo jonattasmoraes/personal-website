@@ -8,6 +8,12 @@ export const Card = styled.div`
   grid-template-columns: repeat(5, 1fr);
   margin-top: ${fontSize.ll};
 
+  span {
+    display: flex;
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+
   div:nth-child(1) {
     grid-column: span 1 / span 1;
 
@@ -40,16 +46,6 @@ export const Card = styled.div`
       &:hover {
         text-decoration: underline;
       }
-
-      svg {
-        margin-left: 4px;
-      }
-    }
-
-    span {
-      display: flex;
-      margin-bottom: 8px;
-      margin-top: 8px;
     }
 
     p {
@@ -57,23 +53,17 @@ export const Card = styled.div`
       color: ${colors.whiteTwo};
       text-align: justify;
     }
+  }
+`
 
-    span:nth-child(4) {
-      svg {
-        margin-top: -2px;
-      }
-    }
+export const Links = styled.div`
+  display: flex;
+  margin-bottom: 8px;
+  margin-top: 8px;
 
-    span:nth-child(1) {
-      display: flex;
-      margin-bottom: 8px;
-      cursor: pointer;
-
-      svg {
-        margin-left: 4px;
-        margin-top: -2px;
-      }
-    }
+  svg {
+    margin-left: 4px;
+    margin-top: -2px;
   }
 `
 

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { MdOutlineArrowOutward } from 'react-icons/md'
 import { FaGithub } from 'react-icons/fa'
 
-import { Card, Title } from './styles'
+import { Card, Links, Title } from './styles'
 
 export type Project = {
   id: number
@@ -33,14 +33,14 @@ const Cards = ({
       <div>
         <Image src={urlIcon} alt="logo" width={50} height={50} />
         {deployUrl ? (
-          <span>
+          <Links>
             <a href={deployUrl} target="_blank">
               <Title>
                 {name}
                 <MdOutlineArrowOutward />
               </Title>
             </a>
-          </span>
+          </Links>
         ) : (
           <span>
             <Title>{name}</Title>
@@ -48,12 +48,12 @@ const Cards = ({
         )}
         <p>{aboutProject}</p>
         {repositoryUrl && (
-          <span>
+          <Links>
             <a href={repositoryUrl} target="_blank">
               GitHub
               <FaGithub />
             </a>
-          </span>
+          </Links>
         )}
         <span>{infos}</span>
       </div>

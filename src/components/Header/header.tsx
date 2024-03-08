@@ -29,6 +29,7 @@ const Header = ({ content }: Props) => {
               src={item.banner}
               alt="Banner"
               fill
+              priority
               style={{
                 objectFit: 'cover',
                 objectPosition: 'center',
