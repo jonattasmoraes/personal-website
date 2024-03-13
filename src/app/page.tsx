@@ -13,13 +13,13 @@ export default function Home() {
   const [loading, setLoading] = useState(true)
 
   const { data: projects, isFetching: projectsIsFetching } =
-    useFetch<Project[]>('/projects')
+    useFetch<Project[]>('/project')
 
   const { data: content, isFetching: contentIsFetching } =
     useFetch<Content[]>('/content')
 
   useEffect(() => {
-    if (projectsIsFetching || contentIsFetching) {
+    if (projectsIsFetching && contentIsFetching) {
       setLoading(true)
     }
   }, [projectsIsFetching, contentIsFetching])

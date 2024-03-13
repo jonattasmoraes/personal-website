@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 
 const api = axios.create({
-  baseURL: 'https://jon-api-website.vercel.app/api'
+  baseURL: `${process.env.NEXT_PUBLIC_API_URL}`
 })
 
 export function useFetch<T = unknown>(url: string) {
