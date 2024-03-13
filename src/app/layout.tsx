@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Jôn - Fullstack Developer',
   description: 'Only a personal website',
   icons: {
-    icon: '/tempIcon.png'
+    icon: '/Icon.png'
   }
 }
 
